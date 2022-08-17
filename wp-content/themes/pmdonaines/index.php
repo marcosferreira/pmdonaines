@@ -61,7 +61,7 @@
         <ul class="navbar-nav navbar-mobile justify-content-center align-items-center pt-2 pb-2">
           <li class="nav-item"><a class="nav-link" href="#">Acesso à Informação</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Carta de Serviços</a></li>
-          <li class="nav-item"><a class="nav-link btn" href="#">Portal da Transparência</a></li>
+          <li class="nav-item"><a class="nav-link btn" href="https://transparencia.pmdonaines.pb.gov.br" target="_blank">Portal da Transparência</a></li>
         </ul>
       </nav>
     </div>
@@ -175,7 +175,7 @@
             <div class="form-group">
               <label for="searchFormControlInput">Encontre o que está procurando aqui:</label>
               <div class="d-flex">
-                <input type="text" class="form-control mr-2" id="searchFormControlInput" placeholder="O que você procura? Exemplo: contra-cheque, contratos, licitações">
+                <input type="text" class="form-control mr-2" id="searchFormControlInput" placeholder="O que você procura? Exemplo: Notícias, contra-cheque, contratos, licitações">
                 <button class="btn" type="submit">Buscar</button>
               </div>
             </div>
@@ -439,7 +439,7 @@
                   Av. Major Augusto Bezerra, 02 <br> Centro - Dona Inês/PB
                 </address>
               </div>
-              <div class="col-lg-5 card-esic-content p-3 border rounded">
+              <div class="col-lg-5 card-esic-content card-esic-hover p-3 border rounded">
                 <a href="#">
                   <div class="row">
                     <div class="col">
@@ -463,7 +463,7 @@
                 </a>
               </div>
             </div>
-            <div class="row m-0 d-flex align-items-center  card-esic-content border rounded">
+            <div class="row m-0 d-flex align-items-center card-esic-content border rounded">
               <div class="col-lg-8 p-3">
                 <small>
                   <b>Atendimento:</b> Segunda à Sexta, das 8h00 às 12h00.
@@ -493,7 +493,7 @@
                     <li></li>
                 </ul>
             </div> -->
-      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+      <div id="carouselInterval" class="carousel slide" data-ride="carousel">
         <div id="carouselMainCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselMainCaptions" data-slide-to="0" class="active"></li>
@@ -626,7 +626,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -654,7 +654,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -680,7 +680,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -707,7 +707,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -739,7 +739,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -767,7 +767,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -793,7 +793,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -820,7 +820,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -852,7 +852,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -880,7 +880,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -906,7 +906,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
@@ -933,7 +933,7 @@
                 </a>
               </p>
               <p>
-                <a href="<?php echo get_home_url(); ?>">leia mais</a>
+                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
               </p>
             </div>
           </article>
