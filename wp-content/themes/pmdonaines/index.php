@@ -22,8 +22,9 @@
       <div class="container">
         <div class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Sistemas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Webmail</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://transparencia.pmdonaines.pb.gov.br/" target="_blank">Transparência</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://webmail.pmdonaines.pb.gov.br/" target="_blank">Webmail</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://donaines-sistemas.online/" target="_blank">Sistemas</a></li>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#">+A</a></li>
@@ -59,8 +60,8 @@
         </div>
 
         <ul class="navbar-nav navbar-mobile justify-content-center align-items-center pt-2 pb-2">
-          <li class="nav-item"><a class="nav-link" href="#">Acesso à Informação</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Carta de Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://esic.pmdonaines.pb.gov.br/" target="_blank">Acesso à Informação</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://pmdonaines.pb.gov.br/carta-de-servicos/" target="_blank">Carta de Serviços</a></li>
           <li class="nav-item"><a class="nav-link btn" href="https://transparencia.pmdonaines.pb.gov.br" target="_blank">Portal da Transparência</a></li>
         </ul>
       </nav>
@@ -78,10 +79,20 @@
           <div class="col-lg-3">
             <ul class="p-2">
               <li>
+                <h4>Acesso à Informação</h4>
+              </li>
+              <li><a href="https://esic.pmdonaines.pb.gov.br/" target="_blank">Informação ao Cidadão</a></li>
+              <li><a href="https://transparencia.pmdonaines.pb.gov.br/" target="_blank">Portal da Transparência</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/diario-oficial/" target="_blank">Diário Oficial do Município</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
                 <h4>Coronavírus</h4>
               </li>
-              <li><a href="#">Transparência Covid-19</a></li>
-              <li><a href="#">Relatórios Covid-19</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/covid-19/" target="_blank">Transparência Covid-19</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/relatorios-covid-19/" target="_blank">Relatórios Covid-19</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -89,10 +100,10 @@
               <li>
                 <h4>Município</h4>
               </li>
-              <li><a href="#">História do Município</a></li>
-              <li><a href="#">Hino do Município</a></li>
-              <li><a href="#">Feriados Municipais</a></li>
-              <li><a href="#">Links Úteis</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/historia-do-municipio/" target="_blank">História do Município</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/hino/" target="_blank">Hino do Município</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/feriados-municipais/" target="_blank">Feriados Municipais</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/links-uteis/" target="_blank">Links Úteis</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -100,31 +111,25 @@
               <li>
                 <h4>Governo</h4>
               </li>
-              <li><a href="#">A Prefeitura</a></li>
-              <li><a href="#">O Prefeito</a></li>
-              <li><a href="#">O Vice-prefeito</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/a-prefeitura/" target="_blank">Prefeitura</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/o-prefeito/" target="_blank">Prefeito</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/o-vice-prefeito/" target="_blank">Vice-prefeito</a></li>
+              <li><a href="#" target="_blank">Secretários e Diretores</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
             <ul class="p-2">
               <li>
-                <h4>Secretarias</h4>
+                <h4>Secretarias e Orgãos</h4>
               </li>
-              <li><a href="#">Administração e Finanças</a></li>
-              <li><a href="#">Assistência Social e Habitação</a></li>
-              <li><a href="#">Cultura e Turismo</a></li>
-              <li><a href="#">Educação e Cultura</a></li>
-              <li><a href="#">Infraestrutura</a></li>
-              <li><a href="#">Saúde</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <ul class="p-2">
-              <li>
-                <h4>Órgão</h4>
-              </li>
-              <li><a href="#">Gabinete de Prefeito</a></li>
-              <li><a href="#">IMPRESP</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/gabinete-do-prefeito/" target="_blank">Gabinete do Prefeito</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-administracao-e-financas/" target="_blank">Administração e Finanças</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/10/CLIQUE-AQUI-PARA-ACESSAR-O-EDITAL-2.png" target="_blank">Assistência Social e Habitação</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-cultura-e-turismo/" target="_blank">Cultura e Turismo</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-educacao-e-desporto/" target="_blank">Educação e Desporto</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-de-infraestrutura-agricultura-e-meio-ambiente/" target="_blank">Infraestrutura e Meio Ambiente</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-saude/" target="_blank">Saúde</a></li>
+              <li><a href="#">Impresp</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -135,6 +140,7 @@
               <li><a href="#">Agricultura</a></li>
               <li><a href="#">Obras</a></li>
               <li><a href="#">Limpeza Pública</a></li>
+              <li><a href="#">Tecnologia da Informação</a></li>
             </ul>
           </div>
           <div class="col-lg-3">
@@ -151,16 +157,15 @@
               <li>
                 <h4>Legislação</h4>
               </li>
-              <li><a href="#">Leis Municipais</a></li>
-              <li><a href="#">Leis na Câmera Municipal</a></li>
-              <li><a href="#">Decretos</a></li>
-              <li><a href="#">Diário Oficial</a></li>
-              <li><a href="#">Código Tributário</a></li>
-              <li><a href="#">Regulamento da LAI</a></li>
-              <li><a href="#">Lei Orgânica do Município</a></li>
-              <li><a href="#">LDO</a></li>
-              <li><a href="#">LOA</a></li>
-              <li><a href="#">PPA</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/leis" target="_blank">Leis Municipais</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/leis-municipais/" target="_blank">Leis na Câmera Municipal</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/lei-organica-do-municipio-de-dona-ines-pb/" target="_blank">Lei Orgânica do Município</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/decretos/" target="_blank">Decretos</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/lc-01-codigo-tributario/" target="_blank">Código Tributário</a></li>
+              <li><a href="http://www.acessoainformacao.gov.br/assuntos/conheca-seu-direito/a-lei-de-acesso-a-informacao" target="_blank">Regulamento da LAI</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/ldo/" target="_blank">LDO</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/loa/" target="_blank">LOA</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/ppa/" target="_blank">PPA</a></li>
             </ul>
           </div>
         </div>
@@ -191,7 +196,7 @@
         <h3 class="title-section">Acesso Rápido</h3>
         <div class="row d-flex justify-content-center align-items-start">
           <div class="card-icon">
-            <a href="#">
+            <a href="https://transparencia.pmdonaines.pb.gov.br/#covid19" target="_blank">
               <div class="rounded-circle m-2">
                 <span class="material-icons-outlined">
                   coronavirus
@@ -201,7 +206,7 @@
             </a>
           </div>
           <div class="card-icon">
-            <a href="#">
+            <a href="https://esic.pmdonaines.pb.gov.br" target="_blank">
               <div class="rounded-circle m-2">
                 <span class="material-icons-outlined">
                   info
@@ -211,7 +216,7 @@
             </a>
           </div>
           <div class="card-icon">
-            <a href="#">
+            <a href="https://transparencia.pmdonaines.pb.gov.br" target="_blank">
               <div class="rounded-circle m-2">
                 <span class="material-icons-outlined">
                   manage_search
@@ -221,7 +226,7 @@
             </a>
           </div>
           <div class="card-icon">
-            <a href="#">
+            <a href="https://tributos.elmartecnologia.com.br/portais/donaines/" target="_blank">
               <div class="rounded-circle m-2">
                 <span class="material-icons-outlined">
                   paid
@@ -231,7 +236,7 @@
             </a>
           </div>
           <div class="card-icon">
-            <a href="#">
+            <a href="https://pmdonaines.pb.gov.br/category/diario-oficial/" target="_blank">
               <div class="rounded-circle m-2">
                 <span class="material-icons-outlined">
                   feed
@@ -241,7 +246,7 @@
             </a>
           </div>
           <div class="card-icon">
-            <a href="#">
+            <a href="https://pmdonaines.pb.gov.br/ouvidoria/" target="_blank">
               <div class="rounded-circle m-2">
                 <span class="material-icons-outlined">
                   campaign
@@ -302,8 +307,11 @@
                 <div class="h-100 d-flex flex-column justify-content-around align-items-center">
                   <h3 class="card-title-more">DONA INÊS <b>NO COMBATE AO COVID-19</b></h3>
                   <div class="w-100 d-flex justify-content-around align-items-center">
-                    <p class="mt-3">Previna-se e tire suas dúvidas</p>
-                    <a href="#" class="btn card-btn-more m-2">SAIBA MAIS</a>
+                    <p class="mt-3 w-100 ">Previna-se e tire suas dúvidas</p>
+                    <div>
+                      <a href="https://pmdonaines.pb.gov.br/category/boletim-epidemiologico-codiv-19/" target="_blank" class="btn card-btn-more w-100  m-2">BOLETINS</a>
+                      <a href="https://pmdonaines.pb.gov.br/relatorios-covid-19/" target="_blank" class="btn card-btn-more w-100  m-2">RELATÓRIOS</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -319,7 +327,7 @@
                       <small>
                         Total de doses únicas aplicadas
                       </small>
-                      <h4>2400</h4>
+                      <h4>146</h4>
                     </div>
                   </div>
                   <div class="col-lg-3">
@@ -327,7 +335,7 @@
                       <small>
                         Total de 1ª doses aplicadas
                       </small>
-                      <h4>2400</h4>
+                      <h4>8.753</h4>
                     </div>
                   </div>
                   <div class="col-lg-3">
@@ -335,7 +343,7 @@
                       <small>
                         Total de 2ª doses aplicadas
                       </small>
-                      <h4>2400</h4>
+                      <h4>8.589</h4>
                     </div>
                   </div>
                   <div class="col-lg-3">
@@ -343,7 +351,7 @@
                       <small>
                         Percentual da população vacinada
                       </small>
-                      <h4>2400</h4>
+                      <h4>84%</h4>
                     </div>
                   </div>
                 </div>
@@ -356,7 +364,7 @@
         <div class="col-sm btn-group">
           <div class="row h-100 m-0">
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="https://pmdonaines.pb.gov.br/nfs/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   receipt_long
                 </span>
@@ -364,7 +372,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="http://transparencia.pb.gov.br/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   manage_search
                 </span>
@@ -372,7 +380,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="https://pmdonaines.pb.gov.br/perguntas-frequentes/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   forum
                 </span>
@@ -380,7 +388,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="https://tce.pb.gov.br/sagres-online" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   price_check
                 </span>
@@ -396,7 +404,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="https://pmdonaines.pb.gov.br/ouvidoria/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   campaign
                 </span>
@@ -412,7 +420,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="https://donaines-sistemas.online/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   grid_view
                 </span>
@@ -420,7 +428,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="http://webmail.pmdonaines.pb.gov.br/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   email
                 </span>
@@ -440,7 +448,7 @@
                 </address>
               </div>
               <div class="col-lg-5 card-esic-content card-esic-hover p-3 border rounded">
-                <a href="#">
+                <a href="https://esic.pmdonaines.pb.gov.br" target="_blank">
                   <div class="row">
                     <div class="col">
                       <div class="d-flex">
@@ -470,7 +478,7 @@
                 </small>
               </div>
               <div class="col-lg-4 p-3 ">
-                <a href="#" class="btn btn-sm roudend-pill">
+                <a href="https://esic.pmdonaines.pb.gov.br" target="_blank" class="btn btn-sm roudend-pill">
                   Abrir/Consultar
                 </a>
               </div>
@@ -493,7 +501,8 @@
                     <li></li>
                 </ul>
             </div> -->
-      <div id="carouselInterval" class="carousel slide" data-ride="carousel">
+      <?php echo do_shortcode('[slide-anything id="5"]'); ?>
+      <!-- <div id="carouselInterval" class="carousel slide" data-ride="carousel">
         <div id="carouselMainCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselMainCaptions" data-slide-to="0" class="active"></li>
@@ -540,67 +549,56 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+      </div> -->
     </section>
     <section class="container container-news-featured">
-      <div class="row mb-4">
-        <div class="col-lg-6">
-          <article class="featured">
-            <a href="#">
-              <header>
-                <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
-              </header>
-            </a>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Assistência Social</a>
-              </p>
-              <h2>
-                <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
-              </h2>
-            </div>
-          </article>
+      <article>
+        <a href="#">
+          <header>
+            <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
+          </header>
+        </a>
+        <div class="content">
+          <p class="tag">
+            <a href="#">Assistência Social</a>
+          </p>
+          <h2>
+            <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
+          </h2>
         </div>
-        <div class="col-lg-6">
-          <div class="row mb-4">
-            <div class="col">
-              <article>
-                <a href="#">
-                  <header>
-                    <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-                  </header>
-                </a>
-                <div class="content">
-                  <p class="tag">
-                    <a href="#">Saúde</a>
-                  </p>
-                  <h2>
-                    <a href="#"> Oficina sobre fluxos e aprimoramento da integração da rede de serviços. </a>
-                  </h2>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <article>
-                <a href="#">
-                  <header>
-                    <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-28-at-16.24.50-1024x1024.jpeg" alt="">
-                  </header>
-                </a>
-                <div class="content">
-                  <p class="tag">
-                    <a href="#">Administração</a>
-                  </p>
-                  <h2>
-                    <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-                  </h2>
-                </div>
-              </article>
-            </div>
-          </div>
+      </article>
+
+      <article>
+        <a href="#">
+          <header>
+            <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
+          </header>
+        </a>
+        <div class="content">
+          <p class="tag">
+            <a href="#">Assistência Social</a>
+          </p>
+          <h2>
+            <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
+          </h2>
         </div>
-      </div>
+      </article>
+
+      <article>
+        <a href="#">
+          <header>
+            <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
+          </header>
+        </a>
+        <div class="content">
+          <p class="tag">
+            <a href="#">Assistência Social</a>
+          </p>
+          <h2>
+            <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
+          </h2>
+        </div>
+      </article>
     </section>
     <section class="container container-news-more">
       <h3 class="title-section-two">Administração e Finanças</h3>

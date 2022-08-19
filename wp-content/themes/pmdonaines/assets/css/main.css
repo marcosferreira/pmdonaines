@@ -259,14 +259,27 @@ main section div.carousel div.carousel-inner div.carousel-item a:hover {
   color: #eee;
 }
 
-main section.container-news-featured article.featured {
-  width: 100%;
-  height: 475px;
+main section.container.container-news-featured {
+  margin-bottom: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 300px;
+  gap: 10px;
 }
 
-main section.container-news-featured article {
+main section.container.container-news-featured article:nth-child(1) {
   width: 100%;
-  height: 225px;
+  height: 610px;
+
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+main section.container.container-news-featured article {
+  width: 100%;
+  height: 300px;
+
   background-color: #333;
   border-radius: 4px;
   overflow: hidden;
@@ -290,6 +303,7 @@ main section.container-news-featured article header img {
   object-fit: cover;
   transition: 0.3s all;
 }
+
 main section.container-news-featured article header img:hover {
   width: 120%;
   height: 120%;
@@ -358,6 +372,7 @@ main section.container-news-more article header img {
 
   object-fit: cover;
 }
+
 main section.container-news-more article div.content {
   width: 100%;
   height: 240px;
@@ -599,11 +614,11 @@ main section.container-news-more .btn-more:hover {
   color: var(--color-primary-blue);
 }
 
-.card-icon .rounded-circle:hover > span {
+.card-icon .rounded-circle:hover>span {
   color: var(--color-primary-blue);
 }
 
-.card-icon .rounded-circle > .fa {
+.card-icon .rounded-circle>.fa {
   font-size: 2.1rem;
   color: #ffffff;
 }
@@ -619,6 +634,8 @@ main section.container-news-more .btn-more:hover {
 
 .card-vacina-covid19 .card-btn-more {
   min-width: 140px;
+  height: 30px;
+  font-size: 0.7rem;
   color: #fff;
   border-color: #fff;
 }
@@ -645,12 +662,13 @@ main section.container-news-more .btn-more:hover {
   background-color: var(--color-primary-blue);
   transition: all 0.2s;
 }
+
 .card-esic-hover:hover {
   background-color: var(--color-primary-yellow);
   color: var(--color-primary-blue);
 }
 
-.card-esic-hover:hover > a {
+.card-esic-hover:hover>a {
   color: var(--color-primary-blue);
 }
 
@@ -672,6 +690,7 @@ main section.container-news-more .btn-more:hover {
   color: #fff;
   font-weight: 500;
 }
+
 .card-esic .btn:hover {
   background-color: var(--color-primary-yellow);
   color: var(--color-secondary-blue);
