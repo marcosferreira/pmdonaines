@@ -259,7 +259,7 @@ main section div.carousel div.carousel-inner div.carousel-item a:hover {
   color: #eee;
 }
 
-main section.container.container-news-featured {
+main section.container div.container-news-featured {
   margin-bottom: 20px;
 
   display: grid;
@@ -268,7 +268,7 @@ main section.container.container-news-featured {
   gap: 10px;
 }
 
-main section.container.container-news-featured article:nth-child(1) {
+main section.container div.container-news-featured article:nth-child(1) {
   width: 100%;
   height: 610px;
 
@@ -276,7 +276,7 @@ main section.container.container-news-featured article:nth-child(1) {
   grid-row: 1 / 3;
 }
 
-main section.container.container-news-featured article {
+main section.container div.container-news-featured article {
   width: 100%;
   height: 300px;
 
@@ -286,31 +286,31 @@ main section.container.container-news-featured article {
   position: relative;
 }
 
-main section.container-news-featured article a {
+main section.container div.container-news-featured article a {
   color: #fff;
 }
 
-main section.container-news-featured article header {
+main section.container div.container-news-featured article header {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-main section.container-news-featured article header img {
+main section.container div.container-news-featured article header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.3s all;
 }
 
-main section.container-news-featured article header img:hover {
+main section.container div.container-news-featured article header img:hover {
   width: 120%;
   height: 120%;
   transition: 0.3s all;
 }
 
-main section.container-news-featured article div.content {
+main section.container div.container-news-featured article div.content {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -321,11 +321,11 @@ main section.container-news-featured article div.content {
   bottom: 0;
 }
 
-main section.container-news-featured article div.content p.tag {
+main section.container div.container-news-featured article div.content p.tag {
   text-transform: uppercase;
 }
 
-main section.container-news-featured article div.content h2 {
+main section.container div.container-news-featured article div.content h2 {
   width: 90%;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -339,7 +339,7 @@ main section.container-news-featured article div.content h2 {
   font-size: 1.8rem;
 }
 
-main section.container-news-featured article.featured div.content h2 {
+main section.container div.container-news-featured article.featured div.content h2 {
   width: 90%;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -530,7 +530,7 @@ main section.container-news-more .btn-more:hover {
     padding: 30px;
   }
 
-  main section.container-news-featured article.featured {
+  main section.container div.container-news-featured article.featured {
     width: 100%;
     margin-bottom: 20px;
   }

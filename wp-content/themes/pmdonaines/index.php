@@ -551,54 +551,57 @@
         </div>
       </div> -->
     </section>
-    <section class="container container-news-featured">
-      <article>
-        <a href="#">
-          <header>
-            <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
-          </header>
-        </a>
-        <div class="content">
-          <p class="tag">
-            <a href="#">Assistência Social</a>
-          </p>
-          <h2>
-            <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
-          </h2>
-        </div>
-      </article>
+    <section class="container">
+      <h3 class="title-section-two">Notícias em Destaque</h3>
+      <div class="container-news-featured">
+        <article>
+          <a href="#">
+            <header>
+              <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
+            </header>
+          </a>
+          <div class="content">
+            <p class="tag">
+              <a href="#">Assistência Social</a>
+            </p>
+            <h2>
+              <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
+            </h2>
+          </div>
+        </article>
 
-      <article>
-        <a href="#">
-          <header>
-            <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
-          </header>
-        </a>
-        <div class="content">
-          <p class="tag">
-            <a href="#">Assistência Social</a>
-          </p>
-          <h2>
-            <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
-          </h2>
-        </div>
-      </article>
+        <article>
+          <a href="#">
+            <header>
+              <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
+            </header>
+          </a>
+          <div class="content">
+            <p class="tag">
+              <a href="#">Assistência Social</a>
+            </p>
+            <h2>
+              <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
+            </h2>
+          </div>
+        </article>
 
-      <article>
-        <a href="#">
-          <header>
-            <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
-          </header>
-        </a>
-        <div class="content">
-          <p class="tag">
-            <a href="#">Assistência Social</a>
-          </p>
-          <h2>
-            <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
-          </h2>
-        </div>
-      </article>
+        <article>
+          <a href="#">
+            <header>
+              <img class="" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/Snapshot_16-1024x576.png" alt="">
+            </header>
+          </a>
+          <div class="content">
+            <p class="tag">
+              <a href="#">Assistência Social</a>
+            </p>
+            <h2>
+              <a href="#"> Cadastro Único na campanha Setembro Verde. Cadastro Único na campanha Setembro Verde. </a>
+            </h2>
+          </div>
+        </article>
+      </div>
     </section>
     <section class="container container-news-more">
       <h3 class="title-section-two">Administração e Finanças</h3>
