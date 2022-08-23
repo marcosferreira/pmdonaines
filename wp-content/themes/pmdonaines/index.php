@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Prefeitura Municipal de Dona Inês</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,60 +13,65 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
   <?php wp_head(); ?>
 
 </head>
 
-<body>
-  <header>
-    <div class="container-fluid accessibility bg-primary">
-      <div class="container">
-        <div class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="https://transparencia.pmdonaines.pb.gov.br/" target="_blank">Transparência</a></li>
-            <li class="nav-item"><a class="nav-link" href="http://webmail.pmdonaines.pb.gov.br/" target="_blank">Webmail</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://donaines-sistemas.online/" target="_blank">Sistemas</a></li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">+A</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">-A</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Alto Contraste</a></li>
-          </ul>
-        </div>
+<body <?php body_class(); ?>>
+  <div class="container-fluid accessibility bg-primary">
+    <div class="container">
+      <div class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="https://transparencia.pmdonaines.pb.gov.br/" target="_blank">Transparência</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://webmail.pmdonaines.pb.gov.br/" target="_blank">Webmail</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://donaines-sistemas.online/" target="_blank">Sistemas</a></li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">+A</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">-A</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Alto Contraste</a></li>
+        </ul>
       </div>
     </div>
-    <div class="container menubar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white rounded-top align-items-center pt-3 pb-3">
-        <div class=" menu-logo d-flex justify-content-between align-items-center">
-          <button class="btn button-menu m-1" onclick="openMenu()">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
+  </div>
+  <header class="menubar">
+    <nav class="navbar container navbar-expand-lg navbar-light bg-white rounded-top justify-content-between align-items-center pt-3 pb-3">
 
+      <div class="menu-logo d-flex justify-content-between align-items-center">
+        <button class="btn button-menu m-1" onclick="openMenu()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <?php
+        $custom_logo_id = get_theme_mod('custom_logo');
+        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+        ?>
+
+        <a class="logo-link" href="<?php echo get_home_url(); ?>">
           <?php
-          $custom_logo_id = get_theme_mod('custom_logo');
-          $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+          if (has_custom_logo()) {
+            echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"/>';
+          } else {
+            // echo '<h1>' . get_bloginfo('name') . '</h1>';
+            echo '<img src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/05/logo-1-425x71.png">';
+          }
           ?>
+        </a>
+      </div>
 
-          <a class="logo-link" href="<?php echo get_home_url(); ?>">
-            <?php
-            if (has_custom_logo()) {
-              echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"/>';
-            } else {
-              // echo '<h1>' . get_bloginfo('name') . '</h1>';
-              echo '<img src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/05/logo-1-425x71.png">';
-            }
-            ?>
-          </a>
-
-        </div>
-
+      <div class="d-flex align-items-center">
         <ul class="navbar-nav navbar-mobile justify-content-center align-items-center pt-2 pb-2">
           <li class="nav-item"><a class="nav-link" href="http://esic.pmdonaines.pb.gov.br/" target="_blank">Acesso à Informação</a></li>
           <li class="nav-item"><a class="nav-link" href="https://pmdonaines.pb.gov.br/carta-de-servicos/" target="_blank">Carta de Serviços</a></li>
           <li class="nav-item"><a class="nav-link btn" href="https://transparencia.pmdonaines.pb.gov.br" target="_blank">Portal da Transparência</a></li>
         </ul>
-      </nav>
-    </div>
+
+        <a class="btn-search-menu nav-link text-primary" href="https://pmdonaines.pb.gov.br/?s" target="_blank">
+          <span class="material-icons-outlined">search</span>
+        </a>
+      </div>
+    </nav>
     <div class="menu-float menu-toggle">
       <div class="container">
         <div class="row m-0">
@@ -171,7 +177,9 @@
         </div>
       </div>
     </div>
+
   </header>
+
   <main>
     <section class="container-search">
       <div class="bg-image-search w-100 h-100" style="background-image: url('wp-content/themes/pmdonaines/assets/images/bg-search-2.jpg'); ">
