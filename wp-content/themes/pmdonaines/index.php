@@ -571,7 +571,6 @@
           while ($query->have_posts()) : $query->the_post();
         ?>
             <article>
-              <a href="<?php the_permalink(); ?>">
                 <header>
                   <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                 </header>
