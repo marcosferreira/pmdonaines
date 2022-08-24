@@ -39,8 +39,8 @@
     <nav class="navbar container navbar-expand-lg navbar-light bg-white rounded-top justify-content-between align-items-center pt-3 pb-3">
 
       <div class="menu-logo d-flex justify-content-between align-items-center">
-        <button class="btn button-menu m-1" onclick="openMenu()">
-          <i class="fa fa-bars" aria-hidden="true"></i>
+        <button id="button-menu" class="btn button-menu m-1" onclick="openMenu()">
+          <i id="button-menu-icon" class="fa fa-bars" aria-hidden="true"></i>
         </button>
 
         <?php
@@ -72,7 +72,7 @@
         </a>
       </div>
     </nav>
-    <div class="menu-float menu-toggle">
+    <div class="menu-float menu-close">
       <div class="container">
         <div class="row m-0">
           <ul class="navbar-mobile-menu justify-content-center align-items-center">
@@ -571,24 +571,24 @@
           while ($query->have_posts()) : $query->the_post();
         ?>
             <article>
-                <header>
-                  <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                </header>
+              <header>
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+              </header>
+              <a href="<?php the_permalink(); ?>">
+                <div class="content">
+                  <p class="tag">
+                    <?php foreach ((get_the_category()) as $category) { ?>
+                      <a href="<?php echo get_category_link($category->cat_ID) ?>">
+                        <?php echo '&nbsp;&bull; ' .$category->cat_name; ?>
+                      </a>
+                    <?php } ?>
+                  </p>
+                  <h2>
+                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                  </h2>
+                </div>
               </a>
-              <div class="content">
-                <p class="tag">
-                  <?php foreach ((get_the_category()) as $category) { ?>
-                    <a href="<?php echo get_category_link($category->cat_ID) ?>">
-                      <?php echo $category->cat_name . ' '; ?>
-                    </a>
-                  <?php } ?>
-                </p>
-                <h2>
-                  <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
-                </h2>
-              </div>
             </article>
-
         <?php
           // the_content();
 
@@ -650,454 +650,250 @@
       </div>
     </section>
     <section class="container container-news-more">
-      <h3 class="title-section-two">Administração e Finanças</h3>
+      <?php
+      $cat_id = get_cat_ID('Administração e Finanças');
+      $category_link = get_category_link($cat_id);
+      $category_name = get_cat_name($cat_id);
+      ?>
+      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
       <div class="row">
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-28-at-16.24.50-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/04/WhatsApp-Image-2022-04-26-at-10.23.26-1024x682.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Educação</a>
-              </p>
-              <h2>
-                <a href="#"> Reunião mensal com os gestores escolares da rede municipal de ensino.. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Na manhã desta terça-feira (26/04), ocorreu mais uma reunião mensal com os gestores escolares da rede municipal de ensino.
+        <?php
+        // query_posts('cat=4', 'posts_per_page=3');
+        // $id_category = '18';
 
-                  No momento, foi abordado as seguintes pautas: Organização do 2º Encontro Pedagógico; Entrega dos kits escolares aos discentes; Informações da Nutricionista da SEMED; Orientações da equipe de Coordenação Pedagógica.
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
+        $posts_per_page = 4;
 
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
+        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+        $query = new WP_Query($args);
+        if (have_posts()) :
+          while ($query->have_posts()) : $query->the_post();
+        ?>
+            <div class="col-lg-6 mb-4">
+              <article class="d-flex">
+                <header>
+                  <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                  </a>
+                </header>
+                <div class="content">
+                  <p class="tag">
+                    <?php
+
+                    // echo $category_name; // It will print your category name
+                    ?>
+                    <a href="<?php echo $category_link; ?>">
+                      <?php echo $category_name; ?>
+                    </a>
+                  </p>
+                  <h2>
+                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                  </h2>
+                  <small>Publicado em: <?php echo get_the_date(); ?></small>
+                  <p class="text">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php echo wp_trim_words(get_the_content(), 20); ?>
+                    </a>
+                  </p>
+                  <p>
+                    <a class="btn btn-more" href="<?php the_permalink(); ?>">leia mais</a>
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
+        <?php
+          // the_content();
+          endwhile;
+        else :
+          _e('Sorry, no posts matched your criteria.', 'textdomain');
+        endif;
+        wp_reset_query();
+        ?>
       </div>
     </section>
 
     <section class="container container-news-more">
-      <h3 class="title-section-two">Assistência Social e Habitação</h3>
+      <?php
+      $cat_id = get_cat_ID('Assistência Social e Habitação');
+      $category_link = get_category_link($cat_id);
+      $category_name = get_cat_name($cat_id);
+      ?>
+      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
       <div class="row">
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-28-at-16.24.50-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/04/WhatsApp-Image-2022-04-26-at-10.23.26-1024x682.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Educação</a>
-              </p>
-              <h2>
-                <a href="#"> Reunião mensal com os gestores escolares da rede municipal de ensino.. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Na manhã desta terça-feira (26/04), ocorreu mais uma reunião mensal com os gestores escolares da rede municipal de ensino.
+        <?php
+        // query_posts('cat=4', 'posts_per_page=3');
+        // $id_category = '18';
 
-                  No momento, foi abordado as seguintes pautas: Organização do 2º Encontro Pedagógico; Entrega dos kits escolares aos discentes; Informações da Nutricionista da SEMED; Orientações da equipe de Coordenação Pedagógica.
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
+        $posts_per_page = 4;
 
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
+        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+        $query = new WP_Query($args);
+        if (have_posts()) :
+          while ($query->have_posts()) : $query->the_post();
+        ?>
+            <div class="col-lg-6 mb-4">
+              <article class="d-flex">
+                <header>
+                  <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                  </a>
+                </header>
+                <div class="content">
+                  <p class="tag">
+                    <?php
+
+                    // echo $category_name; // It will print your category name
+                    ?>
+                    <a href="<?php echo $category_link; ?>">
+                      <?php echo $category_name; ?>
+                    </a>
+                  </p>
+                  <h2>
+                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                  </h2>
+                  <small>Publicado em: <?php echo get_the_date(); ?></small>
+                  <p class="text">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php echo wp_trim_words(get_the_content(), 20); ?>
+                    </a>
+                  </p>
+                  <p>
+                    <a class="btn btn-more" href="<?php the_permalink(); ?>">leia mais</a>
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
+        <?php
+          // the_content();
+          endwhile;
+        else :
+          _e('Sorry, no posts matched your criteria.', 'textdomain');
+        endif;
+        wp_reset_query();
+        ?>
       </div>
     </section>
 
     <section class="container container-news-more">
-      <h3 class="title-section-two">Educação e Desporto</h3>
+      <?php
+      $cat_id = get_cat_ID('Educação e Desporto');
+      $category_link = get_category_link($cat_id);
+      $category_name = get_cat_name($cat_id);
+      ?>
+      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
       <div class="row">
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-28-at-16.24.50-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/04/WhatsApp-Image-2022-04-26-at-10.23.26-1024x682.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Educação</a>
-              </p>
-              <h2>
-                <a href="#"> Reunião mensal com os gestores escolares da rede municipal de ensino.. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Na manhã desta terça-feira (26/04), ocorreu mais uma reunião mensal com os gestores escolares da rede municipal de ensino.
+        <?php
+        // query_posts('cat=4', 'posts_per_page=3');
+        // $id_category = '18';
 
-                  No momento, foi abordado as seguintes pautas: Organização do 2º Encontro Pedagógico; Entrega dos kits escolares aos discentes; Informações da Nutricionista da SEMED; Orientações da equipe de Coordenação Pedagógica.
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
+        $posts_per_page = 4;
 
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
+        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+        $query = new WP_Query($args);
+        if (have_posts()) :
+          while ($query->have_posts()) : $query->the_post();
+        ?>
+            <div class="col-lg-6 mb-4">
+              <article class="d-flex">
+                <header>
+                  <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                  </a>
+                </header>
+                <div class="content">
+                  <p class="tag">
+                    <?php
+
+                    // echo $category_name; // It will print your category name
+                    ?>
+                    <a href="<?php echo $category_link; ?>">
+                      <?php echo $category_name; ?>
+                    </a>
+                  </p>
+                  <h2>
+                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                  </h2>
+                  <small>Publicado em: <?php echo get_the_date(); ?></small>
+                  <p class="text">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php echo wp_trim_words(get_the_content(), 20); ?>
+                    </a>
+                  </p>
+                  <p>
+                    <a class="btn btn-more" href="<?php the_permalink(); ?>">leia mais</a>
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
+        <?php
+          // the_content();
+          endwhile;
+        else :
+          _e('Sorry, no posts matched your criteria.', 'textdomain');
+        endif;
+        wp_reset_query();
+        ?>
       </div>
     </section>
 
     <section class="container container-news-more">
-      <h3 class="title-section-two">Saúde</h3>
+      <?php
+      $cat_id = get_cat_ID('Saúde');
+      $category_link = get_category_link($cat_id);
+      $category_name = get_cat_name($cat_id);
+      ?>
+      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
       <div class="row">
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-28-at-16.24.50-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/04/WhatsApp-Image-2022-04-26-at-10.23.26-1024x682.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Educação</a>
-              </p>
-              <h2>
-                <a href="#"> Reunião mensal com os gestores escolares da rede municipal de ensino.. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Na manhã desta terça-feira (26/04), ocorreu mais uma reunião mensal com os gestores escolares da rede municipal de ensino.
+        <?php
+        // query_posts('cat=4', 'posts_per_page=3');
+        // $id_category = '18';
 
-                  No momento, foi abordado as seguintes pautas: Organização do 2º Encontro Pedagógico; Entrega dos kits escolares aos discentes; Informações da Nutricionista da SEMED; Orientações da equipe de Coordenação Pedagógica.
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
-            </div>
-          </article>
-        </div>
+        $posts_per_page = 4;
 
-        <div class="col-lg-6 mb-4">
-          <article class="d-flex">
-            <header>
-              <a href="#">
-                <img class="rounded" src="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-23-at-13.29.57-1-1024x1024.jpeg" alt="">
-              </a>
-            </header>
-            <div class="content">
-              <p class="tag">
-                <a href="#">Administração</a>
-              </p>
-              <h2>
-                <a href="#"> Veículos do Leilão desta sexta-feira. </a>
-              </h2>
-              <small>Publicado em: 07 de outubro de 2021</small>
-              <p class="text">
-                <a href="#">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi sit ad commodi voluptatem pariatur, est adipisci neque eaque officiis rem sed officia doloremque, dolorum veritatis? Beatae rerum cupiditate fugiat!
-                </a>
-              </p>
-              <p>
-                <a class="btn btn-more" href="<?php echo get_home_url(); ?>">leia mais</a>
-              </p>
+        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+        $query = new WP_Query($args);
+        if (have_posts()) :
+          while ($query->have_posts()) : $query->the_post();
+        ?>
+            <div class="col-lg-6 mb-4">
+              <article class="d-flex">
+                <header>
+                  <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                  </a>
+                </header>
+                <div class="content">
+                  <p class="tag">
+                    <?php
+
+                    // echo $category_name; // It will print your category name
+                    ?>
+                    <a href="<?php echo $category_link; ?>">
+                      <?php echo $category_name; ?>
+                    </a>
+                  </p>
+                  <h2>
+                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                  </h2>
+                  <small>Publicado em: <?php echo get_the_date(); ?></small>
+                  <p class="text">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php echo wp_trim_words(get_the_content(), 20); ?>
+                    </a>
+                  </p>
+                  <p>
+                    <a class="btn btn-more" href="<?php the_permalink(); ?>">leia mais</a>
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
+        <?php
+          // the_content();
+          endwhile;
+        else :
+          _e('Sorry, no posts matched your criteria.', 'textdomain');
+        endif;
+        wp_reset_query();
+        ?>
       </div>
     </section>
   </main>
@@ -1108,7 +904,17 @@
     <script>
       function openMenu() {
         menu = document.querySelector('.menu-float');
-        menu.classList.toggle('menu-toggle')
+        menu.classList.toggle('menu-close');
+
+        button = document.querySelector('#button-menu-icon');
+
+        if (button.className === 'fa fa-bars') {
+          button.classList.remove('fa-bars');
+          button.classList.add('fa-close');
+        } else {
+          button.classList.remove('fa-close');
+          button.classList.add('fa-bars');
+        }
       }
     </script>
   </footer>
