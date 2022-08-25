@@ -565,8 +565,10 @@
       <div class="container-news-featured">
         <?php
         // query_posts('cat=4', 'posts_per_page=3');
-        $id_category = 3;
-        $args = array('posts_per_page' => $id_category, 'cat' => '4');
+        $cat_name_section = 'Notícias';
+        $cat_id = get_cat_ID($cat_name_section);
+        $posts_per_page = 3;
+        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
         $query = new WP_Query($args);
         if (have_posts()) :
           while ($query->have_posts()) : $query->the_post();
