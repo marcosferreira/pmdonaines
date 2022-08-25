@@ -932,6 +932,135 @@
 
     <?php wp_footer(); ?>
 
+    <div class="menu-footer">
+      <div class="container">
+        <!-- <div class="row m-0">
+          <ul class="navbar-mobile-menu justify-content-center align-items-center">
+            <li><a class="btn w-100" href="http://esic.pmdonaines.pb.gov.br/" target="_blank">Acesso à Informação</a></li>
+            <li><a class="btn w-100" href="https://pmdonaines.pb.gov.br/carta-de-servicos/" target="_blank">Carta de Serviços</a></li>
+            <li><a class="btn w-100" href="https://transparencia.pmdonaines.pb.gov.br" target="_blank">Portal da Transparência</a></li>
+          </ul>
+        </div> -->
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Acesso à Informação</h4>
+              </li>
+              <li><a href="https://transparencia.pmdonaines.pb.gov.br/" target="_blank">Portal da Transparência</a></li>
+              <li><a href="https://esic.pmdonaines.pb.gov.br/" target="_blank">e-SIC - Informação ao Cidadão</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/carta-de-servicos/" target="_blank">Carta de Serviços</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/diario-oficial/" target="_blank">Diário Oficial do Município</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Coronavírus</h4>
+              </li>
+              <li><a href="https://pmdonaines.pb.gov.br/covid-19/" target="_blank">Transparência Covid-19</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/relatorios-covid-19/" target="_blank">Relatórios Covid-19</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Município</h4>
+              </li>
+              <li><a href="https://pmdonaines.pb.gov.br/historia-do-municipio/" target="_blank">História do Município</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/hino/" target="_blank">Hino do Município</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/feriados-municipais/" target="_blank">Feriados Municipais</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/links-uteis/" target="_blank">Links Úteis</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Governo</h4>
+              </li>
+              <li><a href="https://pmdonaines.pb.gov.br/a-prefeitura/" target="_blank">Prefeitura</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/o-prefeito/" target="_blank">Prefeito</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/o-vice-prefeito/" target="_blank">Vice-prefeito</a></li>
+              <li><a href="#" target="_blank">Secretários e Diretores</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Secretarias e Orgãos</h4>
+              </li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/gabinete-do-prefeito/" target="_blank">Gabinete do Prefeito</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-administracao-e-financas/" target="_blank">Administração e Finanças</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/wp-content/uploads/2021/10/CLIQUE-AQUI-PARA-ACESSAR-O-EDITAL-2.png" target="_blank">Assistência Social e Habitação</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-cultura-e-turismo/" target="_blank">Cultura e Turismo</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-educacao-e-desporto/" target="_blank">Educação e Desporto</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-de-infraestrutura-agricultura-e-meio-ambiente/" target="_blank">Infraestrutura e Meio Ambiente</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/secretarias-e-orgaos/secretaria-municipal-de-saude/" target="_blank">Saúde</a></li>
+              <li><a href="#">Impresp</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Departamentos</h4>
+              </li>
+              <li><a href="#">Agricultura</a></li>
+              <li><a href="#">Obras</a></li>
+              <li><a href="#">Limpeza Pública</a></li>
+              <li><a href="#">Tecnologia da Informação</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Setores</h4>
+              </li>
+              <li><a href="#">Sala do Empreendedor</a></li>
+              <li><a href="#">Tecnologia</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="p-2">
+              <li>
+                <h4>Legislação</h4>
+              </li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/leis" target="_blank">Leis Municipais</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/leis-municipais/" target="_blank">Leis na Câmera Municipal</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/lei-organica-do-municipio-de-dona-ines-pb/" target="_blank">Lei Orgânica do Município</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/decretos/" target="_blank">Decretos</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/lc-01-codigo-tributario/" target="_blank">Código Tributário</a></li>
+              <li><a href="http://www.acessoainformacao.gov.br/assuntos/conheca-seu-direito/a-lei-de-acesso-a-informacao" target="_blank">Regulamento da LAI</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/ldo/" target="_blank">LDO</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/loa/" target="_blank">LOA</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/category/ppa/" target="_blank">PPA</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <div class="credits">
+      <div class="container">
+        <address> 
+          <b>Av. Major Augusto Bezerra, 02, Centro CEP: 58.228-000 - Dona Inês/PB</b> <br>
+          <b> E-mail:</b> <a href="mailto:gabinete@pmdonaines.pb.gov.br">gabinete@pmdonaines.pb.gov.br </a> <br>
+          <b> Telefone:</b> <a href="tel:+558333771025"> (83) 3377-1025</a> / <a href="tel:+558333771110"> 3377-1110 </a> <br>
+          <b> Exp.:</b> Segunda a Sexta: 07:30h à 11:30h - 13:30h às 17:00 <br>
+          <b> CNPJ:</b> 08.782.146/0001-48
+        </address>
+
+        <a class="logo-link" href="<?php echo get_home_url(); ?>">
+          <?php
+          if (has_custom_logo()) {
+            echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"/>';
+          } else {
+            // echo '<h1>' . get_bloginfo('name') . '</h1>';
+            echo '<img src="' . get_template_directory_uri() . '/assets/images/logo-footer.png" alt="Brasão do Município de Dona Inês" />';
+          }
+          ?>
+        </a>
+      </div>
+    </div>
+
     <script>
       function openMenu() {
         menu = document.querySelector('.menu-float');
