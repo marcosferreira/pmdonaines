@@ -179,7 +179,6 @@
         </div>
       </div>
     </div>
-
   </header>
 
   <main>
@@ -406,7 +405,7 @@
               </a>
             </div>
             <div class="col-lg-4 p-0">
-              <a href="#" class="w-100 h-100 btn btn-outlined mb-2">
+              <a href="https://transparencia.pmdonaines.pb.gov.br/convenios/" target="_blank" class="w-100 h-100 btn btn-outlined mb-2">
                 <span class="material-icons-outlined">
                   group
                 </span>
