@@ -570,7 +570,7 @@
         $posts_per_page = 3;
         $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
         $query = new WP_Query($args);
-        if (have_posts()) :
+        if (have_posts() && $cat_id) :
           while ($query->have_posts()) : $query->the_post();
         ?>
             <article>
