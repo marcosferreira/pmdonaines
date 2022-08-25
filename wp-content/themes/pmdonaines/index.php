@@ -89,6 +89,8 @@
                 <h4>Acesso à Informação</h4>
               </li>
               <li><a href="https://transparencia.pmdonaines.pb.gov.br/" target="_blank">Portal da Transparência</a></li>
+              <li><a href="https://esic.pmdonaines.pb.gov.br/" target="_blank">e-SIC - Informação ao Cidadão</a></li>
+              <li><a href="https://pmdonaines.pb.gov.br/carta-de-servicos/" target="_blank">Carta de Serviços</a></li>
               <li><a href="https://pmdonaines.pb.gov.br/category/diario-oficial/" target="_blank">Diário Oficial do Município</a></li>
             </ul>
           </div>
