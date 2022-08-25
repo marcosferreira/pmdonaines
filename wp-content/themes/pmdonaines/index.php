@@ -77,9 +77,9 @@
       <div class="container">
         <div class="row m-0">
           <ul class="navbar-mobile-menu justify-content-center align-items-center">
-            <li><a class="btn w-100" href="#">Acesso à Informação</a></li>
-            <li><a class="btn w-100" href="#">Carta de Serviços</a></li>
-            <li><a class="btn w-100" href="#">Portal da Transparência</a></li>
+            <li><a class="btn w-100" href="http://esic.pmdonaines.pb.gov.br/" target="_blank">Acesso à Informação</a></li>
+            <li><a class="btn w-100" href="https://pmdonaines.pb.gov.br/carta-de-servicos/" target="_blank">Carta de Serviços</a></li>
+            <li><a class="btn w-100" href="https://transparencia.pmdonaines.pb.gov.br" target="_blank">Portal da Transparência</a></li>
           </ul>
         </div>
         <div class="row">
