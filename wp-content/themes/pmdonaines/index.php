@@ -72,7 +72,7 @@
         </a>
       </div>
     </nav>
-    <div class="menu-float menu-close">
+    <div class="menu-header menu-close">
       <div class="container">
         <div class="row m-0">
           <ul class="navbar-mobile-menu justify-content-center align-items-center">
@@ -1063,7 +1063,7 @@
 
     <script>
       function openMenu() {
-        menu = document.querySelector('.menu-float');
+        menu = document.querySelector('.menu-header');
         menu.classList.toggle('menu-close');
 
         button = document.querySelector('#button-menu-icon');
