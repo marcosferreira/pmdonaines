@@ -932,9 +932,7 @@
     </section>
   </main>
   <footer>
-
     <?php wp_footer(); ?>
-
     <div class="menu-footer">
       <div class="container">
         <!-- <div class="row m-0">
@@ -1040,10 +1038,11 @@
           </div>
         </div>
       </div>
+    </div> <!-- menu-footer -->
 
     <div class="credits">
       <div class="container">
-        <address> 
+        <address>
           <b>Av. Major Augusto Bezerra, 02, Centro CEP: 58.228-000 - Dona Inês/PB</b> <br>
           <b> E-mail:</b> <a href="mailto:gabinete@pmdonaines.pb.gov.br">gabinete@pmdonaines.pb.gov.br </a> <br>
           <b> Telefone:</b> <a href="tel:+558333771025"> (83) 3377-1025</a> / <a href="tel:+558333771110"> 3377-1110 </a> <br>
@@ -1062,7 +1061,7 @@
           ?>
         </a>
       </div>
-    </div>
+    </div><!-- credits -->
 
     <script>
       function openMenu() {

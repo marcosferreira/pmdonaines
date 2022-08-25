@@ -521,7 +521,6 @@ main section.container-news-more .btn-more:hover {
 
 footer .menu-footer {
   width: 100%;
-  height: 100vh;
   background-color: #eee;
   color: #333;
   border-top: 3px solid var(--color-primary-yellow);
@@ -532,7 +531,7 @@ footer .menu-footer {
   /* position: absolute;
   z-index: 100; */
   padding-top: 30px;
-  padding-bottom: 180px;
+  padding-bottom: 80px;
 }
 
 footer .credits {
@@ -702,6 +701,7 @@ footer .credits address a {
 
   footer .credits img {
     max-width: 360px;
+    margin-bottom: 20px;
   }
   
   footer .credits address {
@@ -780,7 +780,8 @@ footer .credits address a {
   }
 
   footer .credits img {
-    max-width: 260px;
+    max-width: 200px;
+    margin-bottom: 20px;
   }
 }
 
