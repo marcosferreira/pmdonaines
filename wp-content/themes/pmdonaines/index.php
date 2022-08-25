@@ -55,7 +55,7 @@
             echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"/>';
           } else {
             // echo '<h1>' . get_bloginfo('name') . '</h1>';
-            echo '<img src="https://pmdonaines.pb.gov.br/wp-content/uploads/2022/05/logo-1-425x71.png">';
+            echo '<img src="' . get_template_directory_uri() . '/assets/images/logo.png"/>';
           }
           ?>
         </a>
