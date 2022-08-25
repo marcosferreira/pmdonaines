@@ -579,7 +579,7 @@
                   <p class="tag">
                     <?php foreach ((get_the_category()) as $category) { ?>
                       <a href="<?php echo get_category_link($category->cat_ID) ?>">
-                        <?php echo '&nbsp;&bull; ' .$category->cat_name; ?>
+                        <?php echo '&nbsp;&bull; ' . $category->cat_name; ?>
                       </a>
                     <?php } ?>
                   </p>
@@ -651,23 +651,28 @@
     </section>
     <section class="container container-news-more">
       <?php
-      $cat_id = get_cat_ID('Administração e Finanças');
+      $cat_name_section = 'Administração e Finanças';
+      $cat_id = get_cat_ID($cat_name_section);
       $category_link = get_category_link($cat_id);
       $category_name = get_cat_name($cat_id);
       ?>
-      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
-      <div class="row">
-        <?php
-        // query_posts('cat=4', 'posts_per_page=3');
-        // $id_category = '18';
 
-        $posts_per_page = 4;
+      <?php
+      // query_posts('cat=4', 'posts_per_page=3');
+      // $id_category = '18';
 
-        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
-        $query = new WP_Query($args);
-        if (have_posts()) :
+      $posts_per_page = 4;
+
+      $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+      $query = new WP_Query($args);
+      if (have_posts() && $cat_id) :
+      ?>
+        <h3 class="title-section-two"><?php echo $category_name; ?></h3>
+        <div class="row">
+          <?php
           while ($query->have_posts()) : $query->the_post();
-        ?>
+          ?>
+
             <div class="col-lg-6 mb-4">
               <article class="d-flex">
                 <header>
@@ -700,36 +705,44 @@
                 </div>
               </article>
             </div>
-        <?php
+          <?php
           // the_content();
           endwhile;
-        else :
-          _e('Sorry, no posts matched your criteria.', 'textdomain');
-        endif;
-        wp_reset_query();
-        ?>
+          ?>
+        </div>
+      <?php
+      else :
+        _e('Desculpe, não existe post de ' . $cat_name_section . '. Crie a categoria e relacione algum post a ela!', 'textdomain');
+      endif;
+      wp_reset_query();
+      ?>
       </div>
     </section>
 
     <section class="container container-news-more">
       <?php
-      $cat_id = get_cat_ID('Assistência Social e Habitação');
+      $cat_name_section = 'Assistência Social e Habitação';
+      $cat_id = get_cat_ID($cat_name_section);
       $category_link = get_category_link($cat_id);
       $category_name = get_cat_name($cat_id);
       ?>
-      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
-      <div class="row">
-        <?php
-        // query_posts('cat=4', 'posts_per_page=3');
-        // $id_category = '18';
 
-        $posts_per_page = 4;
+      <?php
+      // query_posts('cat=4', 'posts_per_page=3');
+      // $id_category = '18';
 
-        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
-        $query = new WP_Query($args);
-        if (have_posts()) :
+      $posts_per_page = 4;
+
+      $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+      $query = new WP_Query($args);
+      if (have_posts() && $cat_id) :
+      ?>
+        <h3 class="title-section-two"><?php echo $category_name; ?></h3>
+        <div class="row">
+          <?php
           while ($query->have_posts()) : $query->the_post();
-        ?>
+          ?>
+
             <div class="col-lg-6 mb-4">
               <article class="d-flex">
                 <header>
@@ -762,98 +775,113 @@
                 </div>
               </article>
             </div>
-        <?php
+          <?php
           // the_content();
           endwhile;
-        else :
-          _e('Sorry, no posts matched your criteria.', 'textdomain');
-        endif;
-        wp_reset_query();
-        ?>
+          ?>
+        </div>
+      <?php
+      else :
+        _e('Desculpe, não existe post de ' . $cat_name_section . '. Crie a categoria e relacione algum post a ela!', 'textdomain');
+      endif;
+      wp_reset_query();
+      ?>
+    </section>
+
+    <section class="container container-news-more">
+      <?php
+      $cat_name_section = 'Educação e Desporto';
+      $cat_id = get_cat_ID($cat_name_section);
+      $category_link = get_category_link($cat_id);
+      $category_name = get_cat_name($cat_id);
+      ?>
+
+      <?php
+      // query_posts('cat=4', 'posts_per_page=3');
+      // $id_category = '18';
+
+      $posts_per_page = 4;
+
+      $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+      $query = new WP_Query($args);
+      if (have_posts() && $cat_id) :
+      ?>
+        <h3 class="title-section-two"><?php echo $category_name; ?></h3>
+        <div class="row">
+          <?php
+          while ($query->have_posts()) : $query->the_post();
+          ?>
+
+            <div class="col-lg-6 mb-4">
+              <article class="d-flex">
+                <header>
+                  <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                  </a>
+                </header>
+                <div class="content">
+                  <p class="tag">
+                    <?php
+
+                    // echo $category_name; // It will print your category name
+                    ?>
+                    <a href="<?php echo $category_link; ?>">
+                      <?php echo $category_name; ?>
+                    </a>
+                  </p>
+                  <h2>
+                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
+                  </h2>
+                  <small>Publicado em: <?php echo get_the_date(); ?></small>
+                  <p class="text">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php echo wp_trim_words(get_the_content(), 20); ?>
+                    </a>
+                  </p>
+                  <p>
+                    <a class="btn btn-more" href="<?php the_permalink(); ?>">leia mais</a>
+                  </p>
+                </div>
+              </article>
+            </div>
+          <?php
+          // the_content();
+          endwhile;
+          ?>
+        </div>
+      <?php
+      else :
+        _e('Desculpe, não existe post de ' . $cat_name_section . '. Crie a categoria e relacione algum post a ela!', 'textdomain');
+      endif;
+      wp_reset_query();
+      ?>
       </div>
     </section>
 
     <section class="container container-news-more">
       <?php
-      $cat_id = get_cat_ID('Educação e Desporto');
+      $cat_name_section = 'Saúde';
+      $cat_id = get_cat_ID($cat_name_section);
       $category_link = get_category_link($cat_id);
       $category_name = get_cat_name($cat_id);
       ?>
-      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
-      <div class="row">
-        <?php
-        // query_posts('cat=4', 'posts_per_page=3');
-        // $id_category = '18';
 
-        $posts_per_page = 4;
-
-        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
-        $query = new WP_Query($args);
-        if (have_posts()) :
-          while ($query->have_posts()) : $query->the_post();
-        ?>
-            <div class="col-lg-6 mb-4">
-              <article class="d-flex">
-                <header>
-                  <a href="<?php the_permalink(); ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                  </a>
-                </header>
-                <div class="content">
-                  <p class="tag">
-                    <?php
-
-                    // echo $category_name; // It will print your category name
-                    ?>
-                    <a href="<?php echo $category_link; ?>">
-                      <?php echo $category_name; ?>
-                    </a>
-                  </p>
-                  <h2>
-                    <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>
-                  </h2>
-                  <small>Publicado em: <?php echo get_the_date(); ?></small>
-                  <p class="text">
-                    <a href="<?php the_permalink(); ?>">
-                      <?php echo wp_trim_words(get_the_content(), 20); ?>
-                    </a>
-                  </p>
-                  <p>
-                    <a class="btn btn-more" href="<?php the_permalink(); ?>">leia mais</a>
-                  </p>
-                </div>
-              </article>
-            </div>
-        <?php
-          // the_content();
-          endwhile;
-        else :
-          _e('Sorry, no posts matched your criteria.', 'textdomain');
-        endif;
-        wp_reset_query();
-        ?>
-      </div>
-    </section>
-
-    <section class="container container-news-more">
       <?php
-      $cat_id = get_cat_ID('Saúde');
-      $category_link = get_category_link($cat_id);
-      $category_name = get_cat_name($cat_id);
+      // query_posts('cat=4', 'posts_per_page=3');
+      // $id_category = '18';
+
+      $posts_per_page = 4;
+
+      $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
+      $query = new WP_Query($args);
+      if (have_posts() && $cat_id) :
       ?>
-      <h3 class="title-section-two"><?php echo $category_name; ?></h3>
-      <div class="row">
-        <?php
-        // query_posts('cat=4', 'posts_per_page=3');
-        // $id_category = '18';
-
-        $posts_per_page = 4;
-
-        $args = array('posts_per_page' => $posts_per_page, 'cat' => $cat_id);
-        $query = new WP_Query($args);
-        if (have_posts()) :
+        <h3 class="title-section-two"><?php echo $category_name; ?></h3>
+        <div class="row">
+          <?php
           while ($query->have_posts()) : $query->the_post();
-        ?>
+          ?>
+
             <div class="col-lg-6 mb-4">
               <article class="d-flex">
                 <header>
@@ -886,14 +914,17 @@
                 </div>
               </article>
             </div>
-        <?php
+          <?php
           // the_content();
           endwhile;
-        else :
-          _e('Sorry, no posts matched your criteria.', 'textdomain');
-        endif;
-        wp_reset_query();
-        ?>
+          ?>
+        </div>
+      <?php
+      else :
+        _e('Desculpe, não existe post de ' . $cat_name_section . '. Crie a categoria e relacione algum post a ela!', 'textdomain');
+      endif;
+      wp_reset_query();
+      ?>
       </div>
     </section>
   </main>
